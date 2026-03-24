@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Технологии на бъдещето</title>
+
+<link href="baner.jpg" rel="stylesheet">
+
+<style>
+
+:root{
+    --main:#0f172a;
+    --accent:#3b82f6;
+    --bg:#f8fafc;
+    --text:#1e293b;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--bg);
+}
+
+/* NAV */
+nav{
+    background:var(--main);
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a.active{
+    color:var(--accent);
+}
+
+/* MENU ICON */
+.menu-icon{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:url("jobs2.jpg") center/cover;
+    color:white;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--main);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        right:0;
+        top:60px;
+        background:var(--main);
+        width:200px;
+        padding:20px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Технологии на бъдещето</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+        <li><a href="Tourism.html">Начало</a></li>
+        <li><a href="profesii.html">Професии</a></li>
+        <li><a href="technologies.html" class="active">Технологии</a></li>
+        <li><a href="kontakti.html">Контакти</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+<h1>Топ 9 модерни технологии</h1>
+<p>Технологиите, които променят света</p>
+</section>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1677442135136-760c813028c0" alt="Изкуствен интелект">
+<div class="card-content">
+<h3>Изкуствен интелект</h3>
+<p>AI позволява на машините да мислят и учат. Използва се в почти всички индустрии.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" alt="Облачни технологии">
+<div class="card-content">
+<h3>Облачни технологии</h3>
+<p>Позволяват съхранение и обработка на данни онлайн.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87" alt="Киберсигурност">
+<div class="card-content">
+<h3>Киберсигурност</h3>
+<p>Защитава системите от кибератаки и заплахи.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="robot00.jpg" alt="Роботика">
+<div class="card-content">
+<h3>Роботика</h3>
+<p>Роботите автоматизират процеси и улесняват работата.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="green.jpg" alt="Зелена енергия">
+<div class="card-content">
+<h3>Зелена енергия</h3>
+<p>Използва природни ресурси за чиста енергия.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="lot.jpg" alt="Интернет на нещата">
+<div class="card-content">
+<h3>IoT</h3>
+<p>Свързва устройства в интелигентни системи.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="VR.jpg" alt="Виртуална реалност">
+<div class="card-content">
+<h3>VR</h3>
+<p>Създава виртуални среди за обучение и забавление.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="bloc.jpg" alt="Blockchain">
+<div class="card-content">
+<h3>Blockchain</h3>
+<p>Сигурна система за съхранение на информация.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="3d.jpg" alt="3D принтиране">
+<div class="card-content">
+<h3>3D принтиране</h3>
+<p>Създава физически обекти от дигитални модели.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Професии на бъдещето</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

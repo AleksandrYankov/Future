@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Контакти</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --main:#0f172a;
+    --accent:#3b82f6;
+    --bg:#f8fafc;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--bg);
+}
+
+/* NAV */
+nav{
+    background:var(--main);
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a.active{
+    color:var(--accent);
+}
+
+/* MENU */
+.menu-icon{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:url("https://images.unsplash.com/photo-1521791136064-7986c2920216") center/cover;
+    color:white;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:800px;
+    margin:auto;
+}
+
+/* FORM */
+form{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin:40px 0;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:var(--accent);
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+/* FOOTER */
+footer{
+    background:var(--main);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        right:0;
+        top:60px;
+        background:var(--main);
+        width:200px;
+        padding:20px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Контакти</h3>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+        <li><a href="Tourism.html">Начало</a></li>
+        <li><a href="profesii.html">Професии</a></li>
+        <li><a href="technologies.html">Технологии</a></li>
+        <li><a href="kontakti.html" class="active">Контакти</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+<h1>Свържи се с нас</h1>
+<p>Изпрати съобщение или задай въпрос</p>
+</section>
+
+<div class="container">
+
+<form>
+<h2>Контактна форма</h2>
+
+<input type="text" placeholder="Име" required>
+<input type="email" placeholder="Имейл" required>
+<textarea rows="5" placeholder="Съобщение" required></textarea>
+
+<button type="submit">Изпрати</button>
+</form>
+
+</div>
+
+<footer>
+<p>© 2026 Професии на бъдещето</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
